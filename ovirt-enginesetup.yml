@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars:
+    ovirt_host_domain: novalocal
+    ovirt_host_fqdn: osscr05r03c01.novalocal
+    ovirt_host_ip: 10.250.96.33
+  vars_prompt:
+  - name: "ovirt_engine_admin_password"
+    prompt: "Please enter a password for admin@internal (ovirt engine admin)"
+  remote_user: root
+  roles:
+  - centos7-ovirt-enginesetup

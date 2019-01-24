@@ -1,0 +1,11 @@
+ovirt_engine_type=ovirt-engine
+ovirt_engine_version=4.1
+# Make sure that link to release rpm is working!!!
+ovirt_rpm_repo=http://resources.ovirt.org/pub/yum-repo/ovirt-release41.rpm
+ovirt_engine_organization=ovirt.com
+ovirt_engine_admin_password=root@123
+
+[engine]
+#ovirt ansible_ssh_user=root ansible_ssh_pass=root@123 ovirt_host_fqdn=Ovirt.com ovirt_host_domain=Ovirt.com ovirt_host_ip=192.168.122.90 ovirt_engine_admin_password=admin
+192.168.122.90 ansible_ssh_user=root ansible_ssh_pass=root@123 ovirt_host_fqdn=192.168.122.90 ovirt_host_domain=192.168.122.90 ovirt_host_ip=192.168.122.237 ovirt_engine_admin_password=admin
+

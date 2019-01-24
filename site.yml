@@ -1,0 +1,9 @@
+---
+- hosts: engine
+  roles:
+    - centos7-ovirt-allinone
+#    - ovirt-common
+#    #    - ovirt-engine-install-packages
+#    #    - ovirt-engine-setup
+    - centos7-ovirt-enginesetup
+#
