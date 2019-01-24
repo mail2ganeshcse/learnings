@@ -1,0 +1,19 @@
+triggers {
+        gerrit (
+			serverName: 'gerrit',
+            triggerOnEvents: [
+				patchsetCreated(excludeDrafts: false, excludeNoCodeChange: false, excludeTrivialRebase: false)
+			],
+			gerritProjects: [[
+				compareType: 'PLAIN',
+				pattern: 'game-of-life',
+				branches: [[ compareType: 'ANT', pattern: '**' ]],
+				disableStrictForbiddenFileVerification: false
+			]]
+            
+        )
+    } 
+
+ https://dzone.com/articles/how-to-trigger-a-build-in-jenkins-when-adding-a-co 
+
+ https://issues.jenkins-ci.org/browse/JENKINS-48167
